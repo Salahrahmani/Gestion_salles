@@ -44,8 +44,6 @@ class DataSalle:
         conn.commit()
         conn.close()
 
-
-
     def get_salle(self, code):
         conn = self.get_connection()
         cursor = conn.cursor()
@@ -58,3 +56,4 @@ class DataSalle:
         if result:
             return Salle(*result)
         return None
+

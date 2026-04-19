@@ -1,4 +1,4 @@
-class salle :
+class Salle :
     def __init__(self,code , decr , categorie , capacite) :
         self.code = code
         self.description = decr

@@ -11,4 +11,11 @@ class ServiceSalle:
             return False, "invalid capacity"
 
         self.dao.insert_salle(salle)
-        return True, "Salle add"
+        return True, "Salle modified"
+
+    def modifier_salle(self, salle):
+        if salle.capacite < 1:
+            return False, "invalid capacity"
+
+        self.dao.update_salle(salle)
+        return True, "Room modified"

@@ -31,6 +31,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.dao_salle.executor": "Run",
     "Python.salle.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -58,7 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1776550053342</updated>
       <workItem from="1776550054378" duration="5280000" />
-      <workItem from="1776560476995" duration="3508000" />
+      <workItem from="1776560476995" duration="3867000" />
     </task>
     <servers />
   </component>
@@ -66,6 +67,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/gestion_des_salles$dao_salle.coverage" NAME="dao_salle Coverage Results" MODIFIED="1776564270523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data" />
     <SUITE FILE_PATH="coverage/gestion_des_salles$salle.coverage" NAME="salle Coverage Results" MODIFIED="1776563543673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
   </component>
 </project>

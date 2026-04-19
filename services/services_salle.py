@@ -19,3 +19,6 @@ class ServiceSalle:
 
         self.dao.update_salle(salle)
         return True, "Room modified"
+
+    def supprimer_salle(self, code):
+        self.dao.delete_salle(code)

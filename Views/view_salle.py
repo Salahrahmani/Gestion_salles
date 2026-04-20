@@ -23,4 +23,6 @@ class ViewSalle(ctk.CTk):
         self.entry_capacite = ctk.CTkEntry(self.cadreInfo)
         self.entry_capacite.grid(row=3, column=1)
         self.cadreButtons = ctk.CTkFrame(self)
-        self.cadreButtons.pack(pady=10) 
+        self.cadreButtons.pack(pady=10)
+        self.btn_add = ctk.CTkButton(self.cadreButtons, text="Ajouter", command=self.ajouter_salle)
+        self.btn_add.grid(row=0, column=0, padx=5)

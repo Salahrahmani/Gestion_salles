@@ -84,7 +84,24 @@ class ViewSalle(ctk.CTk):
             return
 
         salle = Salle(code, description, categorie, capacite)
-
         success, message = self.service.modifier_salle(salle)
-
         print("modifier")
+
+    def modifier_salle(self):
+        print("modifier clicked")
+        self.cadreList = ctk.CTkFrame(self)
+        self.cadreList.pack(pady=10, padx=10)
+
+        self.treeList = ttk.Treeview(
+            self.cadreList,
+            columns=("code", "description", "categorie", "capacite"),
+            show="headings"
+        )
+
+        self.treeList.heading("code", text="CODE")
+        self.treeList.heading("description", text="Description")
+        self.treeList.heading("categorie", text="Catégorie")
+        self.treeList.heading("capacite", text="Capacité")
+
+        self.treeList.pack(expand=True, fill="both")
+

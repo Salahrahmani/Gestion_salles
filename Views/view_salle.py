@@ -22,3 +22,5 @@ class ViewSalle(ctk.CTk):
         ctk.CTkLabel(self.cadreInfo, text="Capacité").grid(row=3, column=0)
         self.entry_capacite = ctk.CTkEntry(self.cadreInfo)
         self.entry_capacite.grid(row=3, column=1)
+        self.cadreButtons = ctk.CTkFrame(self)
+        self.cadreButtons.pack(pady=10) 

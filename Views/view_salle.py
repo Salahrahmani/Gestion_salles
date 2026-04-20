@@ -8,7 +8,7 @@ class ViewSalle(ctk.CTk):
         super().__init__()
         self.service = ServiceSalle()
         self.title("Room management")
-        self.geometry("600x300")
+        self.geometry("700x400")
         self.cadreInfo = ctk.CTkFrame(self)
         self.cadreInfo.pack(pady=10, padx=10)
         ctk.CTkLabel(self.cadreInfo, text="Code").grid(row=0, column=0)

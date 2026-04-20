@@ -30,3 +30,5 @@ class ViewSalle(ctk.CTk):
         self.btn_delete.grid(row=0, column=2, padx=5)
         self.btn_search = ctk.CTkButton(self.cadreButtons, text="Rechercher", command=self.rechercher_salle)
         self.btn_search.grid(row=0, column=3, padx=5)
+        self.btn_update = ctk.CTkButton(self.cadreButtons, text="Modifier", command=self.modifier_salle)
+        self.btn_update.grid(row=0, column=1, padx=5)

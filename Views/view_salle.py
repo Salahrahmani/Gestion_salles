@@ -66,20 +66,24 @@ class ViewSalle(ctk.CTk):
         try:
             capacite = int(capacite)
         except:
-            print("Capacité invalide")
+            messagebox.showinfo("!", message="Capacité invalide")
+
             return
 
         salle = Salle(code, description, categorie, capacite)
 
         success, message = self.service.ajouter_salle(salle)
 
-        print(message)
+        messagebox.showinfo("Salle Ajoutee", message)
         self.lister_salles()
+###########################################################################
     def supprimer_salle(self):
         code = self.entry_code.get()
         self.service.supprimer_salle(code)
+        messagebox.showinfo("Salle supprimée")
         print("Salle supprimée")
         self.lister_salles()
+##############################################################################
     def rechercher_salle(self):
         code = self.entry_code.get()
 
@@ -96,6 +100,7 @@ class ViewSalle(ctk.CTk):
         else:
             print("Salle non trouvée")
             self.lister_salles()
+##########################################################################
 
     def modifier_salle(self):
         print("clicked modifier")
@@ -110,14 +115,15 @@ class ViewSalle(ctk.CTk):
         try:
             capacite = int(capacite)
         except:
-            print("Capacité invalide")
+            messagebox.showinfo("Error", message="Capacité invalide")
+
             return
 
         salle = Salle(code, description, categorie, capacite)
 
         success, message = self.service.modifier_salle(salle)
+        messagebox.showinfo("Salle Modifee", message="Salle Modifee")
 
-        print("Salle Modifee")
         self.lister_salles()
 
 

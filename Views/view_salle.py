@@ -19,3 +19,6 @@ class ViewSalle(ctk.CTk):
         ctk.CTkLabel(self.cadreInfo, text="Catégorie").grid(row=2, column=0)
         self.entry_categorie = ctk.CTkEntry(self.cadreInfo)
         self.entry_categorie.grid(row=2, column=1)
+        ctk.CTkLabel(self.cadreInfo, text="Capacité").grid(row=3, column=0)
+        self.entry_capacite = ctk.CTkEntry(self.cadreInfo)
+        self.entry_capacite.grid(row=3, column=1) 

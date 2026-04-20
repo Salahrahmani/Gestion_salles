@@ -15,9 +15,9 @@ class ServiceSalle:
 
     def modifier_salle(self, salle):
         if salle.capacite < 1:
-            return False, "invalid capacity"
+            return False, "Capacité invalide"
         self.dao.update_salle(salle)
-        return True, "Room modified"
+        return True, "Salle modifiée"
 
     def supprimer_salle(self, code):
         self.dao.delete_salle(code)

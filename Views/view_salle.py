@@ -8,3 +8,5 @@ class ViewSalle(ctk.CTk):
         self.service = ServiceSalle()
         self.title("Room management")
         self.geometry("500x500")
+        self.cadreInfo = ctk.CTkFrame(self)
+        self.cadreInfo.pack(pady=10, padx=10)

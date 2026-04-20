@@ -10,3 +10,6 @@ class ViewSalle(ctk.CTk):
         self.geometry("500x500")
         self.cadreInfo = ctk.CTkFrame(self)
         self.cadreInfo.pack(pady=10, padx=10)
+        ctk.CTkLabel(self.cadreInfo, text="Code").grid(row=0, column=0)
+        self.entry_code = ctk.CTkEntry(self.cadreInfo)
+        self.entry_code.grid(row=0, column=1)

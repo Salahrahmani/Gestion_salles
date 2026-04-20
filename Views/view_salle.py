@@ -13,3 +13,6 @@ class ViewSalle(ctk.CTk):
         ctk.CTkLabel(self.cadreInfo, text="Code").grid(row=0, column=0)
         self.entry_code = ctk.CTkEntry(self.cadreInfo)
         self.entry_code.grid(row=0, column=1)
+        ctk.CTkLabel(self.cadreInfo, text="Description").grid(row=1, column=0)
+        self.entry_description = ctk.CTkEntry(self.cadreInfo)
+        self.entry_description.grid(row=1, column=1)

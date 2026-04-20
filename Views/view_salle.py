@@ -2,6 +2,7 @@ import customtkinter as ctk
 from services.services_salle import ServiceSalle
 from models.salle import Salle
 from tkinter import ttk
+from tkinter import messagebox
 class ViewSalle(ctk.CTk):
     def __init__(self):
         super().__init__()
@@ -39,9 +40,38 @@ class ViewSalle(ctk.CTk):
         categorie = self.entry_categorie.get()
         capacite = self.entry_capacite.get()
         print(code, description, categorie, capacite)
+        try:
+            capacite = int(capacite)
+        except:
+            print("Capacité invalide")
+            return
+
+        salle = Salle(code, description, categorie, capacite)
+
+        success, message = self.service.ajouter_salle(salle)
+
+        print(message)
     def supprimer_salle(self):
-        print("supprimer")
+        code = self.entry_code.get()
+        self.service.supprimer_salle(code)
+        print("Salle supprimée")
     def rechercher_salle(self):
+
         print("rechercher")
     def modifier_salle(self):
+        code = self.entry_code.get()
+        description = self.entry_description.get()
+        categorie = self.entry_categorie.get()
+        capacite = self.entry_capacite.get()
+
+        try:
+            capacite = int(capacite)
+        except:
+            print("Capacité invalide")
+            return
+
+        salle = Salle(code, description, categorie, capacite)
+
+        success, message = self.service.modifier_salle(salle)
+
         print("modifier")
